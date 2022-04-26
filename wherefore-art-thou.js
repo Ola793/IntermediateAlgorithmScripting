@@ -15,16 +15,16 @@ function whatIsInAName(collection, source) {
     		for (let key2 in source) {
     			if (Object.keys(collection[i]).length >= Object.keys(source).length && key1 === key2 && collection[i][key1] === source[key2]) {
     				check = 1; 
-    			}
+    				}
 
       			if (Object.keys(collection[i]).length <= Object.keys(source).length && key1 !== key2 || key1 === key2 && collection[i][key1] !== source[key2]) {
       				check = 0; 
-      			}
+      				}
       				
       			if (Object.keys(collection[i]).length == Object.keys(source).length && key1 === key2 && collection[i][key1] !== source[key2]) {
       				check = 0; 
 				countFalse++;
-      			} 
+      				} 
     			}
   		}
   	check && !countFalse ? arr.push(collection[i]) : arr;
